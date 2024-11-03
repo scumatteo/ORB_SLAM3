@@ -1,0 +1,1 @@
+./Examples/Monocular/mono_usyd Vocabulary/ORBvoc.txt Examples/Monocular/USyd.yaml /data/Week1_2018-03-08/2018-03-08-14-30-07_Dataset_year_-A0.mp4

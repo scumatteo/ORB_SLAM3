@@ -1,0 +1,6 @@
+rosrun topic_tools throttle messages /gmsl/A0/image_rect_color 15 /camera/image_raw
+
+rosrun topic_tools relay /gmsl/A0/image_rect_color /camera/image_raw
+rosrun ORB_SLAM3 Mono Vocabulary/ORBvoc.txt Examples/ROS/ORB_SLAM3/USyd.yaml 
+
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/root/SLAM/programs/ORB_SLAM3/Examples/ROS

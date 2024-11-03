@@ -30,9 +30,9 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
-find_package(OpenCV 4.4)
+find_package(OpenCV 3.2)
    if(NOT OpenCV_FOUND)
-      message(FATAL_ERROR "OpenCV > 4.4 not found.")
+      message(FATAL_ERROR "OpenCV > 3.2 not found.")
    endif()
 
 MESSAGE("OPENCV VERSION:")
@@ -204,6 +204,10 @@ target_link_libraries(mono_euroc ${PROJECT_NAME})
 add_executable(mono_tum_vi
         Examples/Monocular/mono_tum_vi.cc)
 target_link_libraries(mono_tum_vi ${PROJECT_NAME})
+
+add_executable(mono_usyd
+        Examples/Monocular/mono_usyd.cc)
+target_link_libraries(mono_usyd ${PROJECT_NAME})
 
 if(realsense2_FOUND)
     add_executable(mono_realsense_t265
